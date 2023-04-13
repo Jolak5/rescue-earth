@@ -1,15 +1,20 @@
 import {
   createBrowserRouter,
+  createRoutesFromElements,
+  Route,
   RouterProvider,
 } from 'react-router-dom';
 import './App.css';
+import Navbar from './components/Navbar/Navbar';
+import Homepage from './components/homepage/Homepage';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <div>Hello world!</div>,
-  },
-]);
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Navbar />}>
+      <Route index element={<Homepage />} />
+    </Route>,
+  ),
+);
 
 function App() {
   return (

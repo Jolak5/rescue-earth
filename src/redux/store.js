@@ -1,5 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
+import pollutionReducer from './homepage/homepageSlice';
 
 export default configureStore({
-  reducer: {},
+  reducer: {
+    pollution: pollutionReducer,
+  },
 });
