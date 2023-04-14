@@ -5,8 +5,11 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import './App.css';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Navbar from './components/Navbar/Navbar';
 import Homepage from './components/homepage/Homepage';
+import { getForexData } from './redux/homepage/homepageSlice';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,10 +20,19 @@ const router = createBrowserRouter(
 );
 
 function App() {
+  const isLoading = useSelector((state) => state.isLoading);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getForexData());
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <RouterProvider router={router} />
-    </div>
+    isLoading ? <div>isLoading...</div>
+      : (
+        <div className="App">
+          <RouterProvider router={router} />
+        </div>
+      )
   );
 }
 

@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import pollutionReducer from './homepage/homepageSlice';
+import ForexReducer from './homepage/homepageSlice';
 
 export default configureStore({
   reducer: {
-    pollution: pollutionReducer,
+    Forex: ForexReducer,
   },
 });

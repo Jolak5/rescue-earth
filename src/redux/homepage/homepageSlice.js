@@ -1,26 +1,48 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const url = 'http://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={API key}';
+const url = 'https://financialmodelingprep.com/api/v3/fx?apikey=ac91a71935951d8364423fb181d530c8';
 
-export const getPollutionData = createAsyncThunk(
-  'data/getPollutionData',
+export const getForexData = createAsyncThunk(
+  'data/getForexData',
   async () => {
     try {
       const res = await axios.get(url);
-      return res.data;
+      const newForex = res.data.map((item) => ({
+        id: item.ticker,
+        ticker: item.ticker,
+        bid: item.bid,
+      }));
+      return newForex;
     } catch (error) {
       return error.message;
     }
   },
 );
 
-export const pollutionSlice = createSlice({
-  name: 'pollution',
+export const ForexSlice = createSlice({
+  name: 'Forex',
   initialState: {
-    pollution: [],
+    Forex: [],
+    isLoading: true,
   },
   reducers: {},
+  extraReducers: (builders) => {
+    builders
+      .addCase(getForexData.pending, (state) => ({
+        ...state,
+        isLoading: true,
+      }))
+      .addCase(getForexData.fulfilled, (state, action) => ({
+        ...state,
+        isLoading: false,
+        Forex: action.payload,
+      }))
+      .addCase(getForexData.rejected, (state) => ({
+        ...state,
+        isLoading: false,
+      }));
+  },
 });
 
-export default pollutionSlice.reducer;
+export default ForexSlice.reducer;
