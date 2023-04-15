@@ -26,19 +26,22 @@ export const ForexSlice = createSlice({
   name: 'Forex',
   initialState: {
     Forex: [],
+    searchFilter: [],
     forexItem: [],
     isLoading: true,
   },
   reducers: {
+    // display individual item details
     renderItem: (state, action) => {
       const id = action.payload;
       const forexFiltered = state.Forex.filter((Forex) => Forex.id === id);
       return { ...state, forexItem: forexFiltered };
     },
+    // filter out items with the search
     filterItem: (state, action) => {
-      const value = action.payload;
-      const filteredItem = state.Forex.filter((forex) => forex.name.includes(value));
-      return { ...state, Forex: filteredItem };
+      const value = action.payload.toLowerCase();
+      const filteredItem = state.Forex.filter((forex) => forex.country.toLowerCase() === value);
+      return { ...state, searchFilter: filteredItem, isLoading: false };
     },
   },
   extraReducers: (builders) => {
@@ -58,5 +61,5 @@ export const ForexSlice = createSlice({
       }));
   },
 });
-export const { renderItem } = ForexSlice.actions;
+export const { renderItem, filterItem } = ForexSlice.actions;
 export default ForexSlice.reducer;

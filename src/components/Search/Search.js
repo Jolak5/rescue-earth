@@ -1,21 +1,19 @@
-import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import './Homepage.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { renderItem } from '../../redux/homepage/homepageSlice';
 import { openModal } from '../../redux/modal/modalSlice';
+import { closeSearch } from '../../redux/search/searchSlice';
 
-export default function Homepage() {
+// Render search
+export default function Search() {
   const dispatch = useDispatch();
-  // const isSearcing = useSelector((state) => state.Search.isSearch);
-  // console.log(isSearcing);
-  const covid = useSelector((state) => state.Forex.Forex);
-  const newCovid = covid.slice(0, 10);
+  const searchFilter = useSelector((state) => state.Forex.searchFilter);
   return (
     <Container className="forex-container">
-      {newCovid.map((item) => (
+      <button type="button" onClick={() => dispatch(closeSearch())}>close</button>
+      {searchFilter.map((item) => (
         <Col className="eachItem" key={item.id}>
           <h2>{item.country}</h2>
           <p>{item.death}</p>

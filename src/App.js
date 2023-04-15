@@ -22,13 +22,18 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  // const isLoading = useSelector((state) => state.isLoading);
+  const isLoading = useSelector((state) => state.Forex.isLoading);
+
   const isOpen = useSelector((state) => state.Modal.isOpen);
-  console.log(isOpen);
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getForexData());
   }, [dispatch]);
+
+  if (isLoading) {
+    return <div>isLoading..</div>;
+  }
 
   return (
 
