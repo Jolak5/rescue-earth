@@ -40,7 +40,8 @@ export const ForexSlice = createSlice({
     // filter out items with the search
     filterItem: (state, action) => {
       const value = action.payload.toLowerCase();
-      const filteredItem = state.Forex.filter((forex) => forex.country.toLowerCase() === value);
+      // eslint-disable-next-line max-len
+      const filteredItem = state.Forex.filter((forex) => ((forex.country.toLowerCase()).includes(value)) === true);
       return { ...state, searchFilter: filteredItem, isLoading: false };
     },
   },

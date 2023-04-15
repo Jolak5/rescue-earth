@@ -3,16 +3,16 @@ import { createSlice } from '@reduxjs/toolkit';
 export const SearchSlice = createSlice({
   name: 'Search',
   initialState: {
-    isSearch: false,
+    isSearch: true,
   },
   reducers: {
     openSearch: (state) => ({
       ...state,
-      isSearch: true,
+      isSearch: false,
     }),
     closeSearch: (state) => ({
       ...state,
-      isSearch: false,
+      isSearch: true,
     }),
   },
 });

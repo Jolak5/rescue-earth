@@ -7,7 +7,6 @@ import { openSearch } from '../../redux/search/searchSlice';
 export default function Navbar() {
   const dispatch = useDispatch();
   const [filter, setfilter] = useState('');
-  console.log(filter === false);
   function handleFilter(e) {
     e.preventDefault();
     dispatch(filterItem(filter));
