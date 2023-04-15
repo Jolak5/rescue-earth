@@ -1,3 +1,13 @@
-div {
+.forex-container {
     color: black;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1px;
+    padding: 0 20px;
+}
+
+.eachItem {
+    background-color: red;
+    padding: 20px 0;
+    cursor: pointer;
 }
