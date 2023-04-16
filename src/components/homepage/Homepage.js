@@ -9,11 +9,11 @@ import RenderHome from './renderHome';
 import Search from '../Search/Search';
 
 export default function Homepage() {
-  const isSearcing = useSelector((state) => state.Search.isSearch);
+  const isSearching = useSelector((state) => state.Search.isSearch);
 
   return (
     <Container className="forex-container">
-      { isSearcing ? <RenderHome /> : <Search /> }
+      { isSearching ? <RenderHome /> : <Search /> }
     </Container>
   );
 }

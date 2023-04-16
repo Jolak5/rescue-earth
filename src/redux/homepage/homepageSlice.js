@@ -44,6 +44,7 @@ export const ForexSlice = createSlice({
       const filteredItem = state.Forex.filter((forex) => ((forex.country.toLowerCase()).includes(value)) === true);
       return { ...state, searchFilter: filteredItem, isLoading: false };
     },
+    clearFilteredState: (state) => ({ ...state, forexItem: [] }),
   },
   extraReducers: (builders) => {
     builders
@@ -62,5 +63,5 @@ export const ForexSlice = createSlice({
       }));
   },
 });
-export const { renderItem, filterItem } = ForexSlice.actions;
+export const { renderItem, filterItem, clearFilteredState } = ForexSlice.actions;
 export default ForexSlice.reducer;

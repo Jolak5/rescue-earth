@@ -10,7 +10,7 @@ import { openModal } from '../../redux/modal/modalSlice';
 export default function RenderHome() {
   const dispatch = useDispatch();
   const covid = useSelector((state) => state.Forex.Forex);
-  const newCovid = covid.slice(0, 10);
+  const newCovid = covid.slice(0, 20);
   return (
     <Container className="forex-container">
       {newCovid.map((item) => (
