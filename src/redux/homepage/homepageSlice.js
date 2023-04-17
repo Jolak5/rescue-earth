@@ -35,6 +35,7 @@ export const ForexSlice = createSlice({
     renderItem: (state, action) => {
       const id = action.payload;
       const forexFiltered = state.Forex.filter((Forex) => Forex.id === id);
+
       return { ...state, forexItem: forexFiltered };
     },
     // filter out items with the search

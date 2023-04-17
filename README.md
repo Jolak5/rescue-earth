@@ -148,11 +148,11 @@ If you like this project Give a ⭐️!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-We would like to thank:
+I would like to thank:
 - Teammates
 - Mentors
-- Youtube tutorials
 - Microverse guides
+- <a href="https://www.behance.net/sakwadesignstudio">Nelson Sakwa on Behance</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

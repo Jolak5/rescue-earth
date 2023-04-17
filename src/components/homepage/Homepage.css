@@ -1,13 +1,36 @@
 .forex-container {
-    color: black;
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 1px;
-    padding: 0 20px;
+  color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
 }
 
 .eachItem {
-    background-color: red;
-    padding: 20px 0;
-    cursor: pointer;
+  background-color: red;
+  cursor: pointer;
+  text-align: right;
+  padding: 2px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  color: white;
+}
+
+.eachItem:nth-child(1) {
+  grid-column: 1 / -1;
+}
+
+.eachItem:nth-child(odd) {
+  background-color: rgb(224, 31, 31);
+}
+
+.show-more {
+  background-color: transparent;
+  text-align: right;
+  cursor: pointer;
+}
+
+svg {
+  width: 20px;
+  fill: white;
 }

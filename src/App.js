@@ -15,8 +15,7 @@ import RenderCard from './components/individual/RenderCard';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Navbar />}>
-      <Route path="homepage" index element={<Homepage />} />
-      <Route path="items" index element={<RenderCard />} />
+      <Route index element={<Homepage />} />
     </Route>,
   ),
 );

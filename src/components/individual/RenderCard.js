@@ -9,10 +9,15 @@ export default function RenderCard() {
   return (
     <div className="modal">
       <button type="button" onClick={() => dispatch(closeModal())}>Close</button>
-      <h2>{forex[0].id}</h2>
-      <h2>{forex[0].Deaths}</h2>
-      <h2>{forex[0].Fatality}</h2>
       <p>Kayode olatunji</p>
+      {forex.map((item) => (
+        <div className="eachItem" key={item.id}>
+          <h2>{item.id}</h2>
+          <p>{item.death}</p>
+          <p>{item.Fatality}</p>
+
+        </div>
+      ))}
     </div>
   );
 }

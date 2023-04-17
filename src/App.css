@@ -1,8 +1,14 @@
-.App {
-  text-align: center;
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: white;
 }
 
-.modal {
-  position: absolute;
-  z-index: 10;
+button,
+div,
+article,
+h2,
+p {
+  padding: 0;
+  margin: 0;
+  border: none;
 }

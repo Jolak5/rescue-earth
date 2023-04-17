@@ -1,7 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import { openSearch } from '../../redux/search/searchSlice';
+import './Navbar.css';
 
 export default function Navbar() {
   const dispatch = useDispatch();
@@ -12,13 +13,11 @@ export default function Navbar() {
 
   return (
     <div>
-      <button type="button" onClick={handleSearch}>open search</button>
-      <header>
-        <a className="logo" href="/">Logo</a>
-        <nav>
-          <NavLink to="homepage">Homepage</NavLink>
-        </nav>
-      </header>
+      <nav>
+
+        <img src="" alt="Logo" />
+        <button type="button" onClick={handleSearch}>open search</button>
+      </nav>
       <main>
         <Outlet />
       </main>

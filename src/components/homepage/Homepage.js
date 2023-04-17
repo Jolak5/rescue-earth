@@ -12,7 +12,7 @@ export default function Homepage() {
   const isSearching = useSelector((state) => state.Search.isSearch);
 
   return (
-    <Container className="forex-container">
+    <Container>
       { isSearching ? <RenderHome /> : <Search /> }
     </Container>
   );
