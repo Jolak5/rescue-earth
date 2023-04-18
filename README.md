@@ -63,7 +63,20 @@
 
 ### Key Features <a name="key-features"></a>
 
-- shows details of pollutions in a city
+- shows covid update
+- filter data by country name
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://covid-19-stat.onrender.com/country)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Video <a name="live-video"></a>
+
+- [Live video Link](https://www.loom.com/share/6b30d159296c46d6b8ec6fa857b805a2)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
