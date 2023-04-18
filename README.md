@@ -1,6 +1,6 @@
 <div align="center">
  
-  <h3><b>pollution-webapp</b></h3>
+  <h3><b>rescue-earth</b></h3>
 
 </div>
 
@@ -27,9 +27,9 @@
 - [📝 License](#license)
 
 
-# 📖 pollution-webapp <a name="about-project"></a>
+# 📖 rescue-earth <a name="about-project"></a>
 
-**pollution-webapp**  is a  React App where users can easily book and cancle private rocket reservations
+**rescue-earth**  is a  React App where users can easily check covid 19 stats 
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -72,8 +72,8 @@
 
 To get a local copy up and running, follow these steps.
 
-- clone this repo:https://github.com/Jolak5/pollution-webapp
-- cd pollution-webapp
+- clone this repo:https://github.com/Jolak5/rescue-earth
+- cd rescue-earth
 - run npm start to view the project
 
 ### Prerequisites
@@ -94,20 +94,13 @@ Example command:
 ### Setup
 
 Clone this repository to your desired folder:
-- use the git clone command with this [link](https://github.com/Jolak5/pollution-webapp)
-- cd into pollution-webapp
+- use the git clone command with this [link](https://github.com/Jolak5/rescue-earth)
+- cd into rescue-earth
 - Switch branch using this command `git checkout dev`
 - Open index.html in your browser
 - You will be able to see a simple movie website with featured movies and series
 - Once you click on the comment button you should be able to see a pop-up modal with movie details and comment form
-<!--
-Example commands:
 
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -152,7 +145,7 @@ I would like to thank:
 - Teammates
 - Mentors
 - Microverse guides
-- <a href="https://www.behance.net/sakwadesignstudio">Nelson Sakwa on Behance</a>
+- <a href="https://www.behance.net/sakwadesignstudio">Nelson Sakwa on Behance</a> for the design inspiration. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
