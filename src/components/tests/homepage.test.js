@@ -1,4 +1,6 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 import { cleanup, render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import Homepage from '../homepage/Homepage';
@@ -9,7 +11,13 @@ afterEach(cleanup);
 
 describe('Homepage', () => {
   it('Homepage to match Snapshot', () => {
-    const quotes = render(<Provider store={store}><Homepage /></Provider>);
+    const quotes = render(
+      <Router>
+        <Provider store={store}>
+          <Homepage />
+        </Provider>
+      </Router>,
+    );
     expect(quotes).toMatchSnapshot();
   });
 });
