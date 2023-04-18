@@ -1,0 +1,54 @@
+.modal {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.individual {
+  background-image: url("../covidvacine.jpg");
+  padding: 30% 0;
+  color: black;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 20px;
+  background-color: rgb(68, 149, 243);
+}
+
+li:nth-child(odd) {
+  background-color: #587be6;
+}
+
+.country {
+  padding: 10px 20px;
+}
+
+.each-country {
+  padding: 20px 20px;
+  text-align: right;
+}
+
+.each-country h1 {
+  font-size: 4rem;
+}
+
+.individual-item {
+  bottom: 0;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.individual-item p {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 756px) {
+  .individual {
+    padding: 10% 5%;
+  }
+}
