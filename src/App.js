@@ -7,15 +7,19 @@ import {
 import './App.css';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Navbar from './components/Navbar/Navbar';
 import Homepage from './components/homepage/Homepage';
 import { getForexData } from './redux/homepage/homepageSlice';
-import RenderCard from './components/individual/RenderCard';
+import IndividualCard from './components/individual/IndividualCard';
+import Search from './components/Search/Search';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Navbar />}>
+    <Route>
       <Route index element={<Homepage />} />
+      <Route path="Search" index element={<Search />} />
+      <Route path="country" index element={<IndividualCard />} />
+      <Route path="search/country" index element={<IndividualCard />} />
+
     </Route>,
   ),
 );
@@ -31,13 +35,18 @@ function App() {
   }, [dispatch]);
 
   if (isLoading) {
-    return <div>isLoading..</div>;
+    return (
+      <div className="isloading">
+        {' '}
+        <p className="loading">isLoading...</p>
+      </div>
+    );
   }
 
   return (
 
     <div className="App">
-      { isOpen ? <RenderCard /> : <RouterProvider router={router} />}
+      { isOpen ? <IndividualCard /> : <RouterProvider router={router} />}
     </div>
 
   );

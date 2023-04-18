@@ -8,14 +8,7 @@ export const getForexData = createAsyncThunk(
   async () => {
     try {
       const res = await axios.get(url);
-      const covidData = res.data.rawData.map((item) => ({
-        id: item.Combined_Key,
-        country: item.Country_Region,
-        death: item.Confirmed,
-        Deaths: item.Deaths,
-        Fatality: item.Case_Fatality_Ratio,
-      }));
-      return covidData;
+      return res.data;
     } catch (error) {
       return error.message;
     }
@@ -26,6 +19,7 @@ export const ForexSlice = createSlice({
   name: 'Forex',
   initialState: {
     Forex: [],
+    Global: [],
     searchFilter: [],
     forexItem: [],
     isLoading: true,
@@ -53,11 +47,22 @@ export const ForexSlice = createSlice({
         ...state,
         isLoading: true,
       }))
-      .addCase(getForexData.fulfilled, (state, action) => ({
-        ...state,
-        isLoading: false,
-        Forex: action.payload,
-      }))
+      .addCase(getForexData.fulfilled, (state, action) => {
+        const data = action.payload;
+        const covidData = data.rawData.map((item) => ({
+          id: item.Combined_Key,
+          country: item.Country_Region,
+          confirmed: item.Confirmed,
+          Deaths: item.Deaths,
+          Fatality: item.Case_Fatality_Ratio,
+          Last_Update: item.Last_Update,
+          Incident_rate: item.Incident_Rate,
+          active: item.Active,
+        }));
+        return {
+          ...state, isLoading: false, Forex: covidData, Global: [action.payload.summaryStats.global],
+        };
+      })
       .addCase(getForexData.rejected, (state) => ({
         ...state,
         isLoading: false,
