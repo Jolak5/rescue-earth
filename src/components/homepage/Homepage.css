@@ -9,13 +9,13 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 1.5rem;
-  background-color: #587BE6;
+  background-color: #587be6;
   border-bottom: 1px solid black;
 }
 
 header h1 {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
 }
 
@@ -31,11 +31,11 @@ header h1 {
 }
 
 .eachItem:nth-child(odd) {
-  background-color: #587BE6;
+  background-color: #587be6;
 }
 
 .global {
-  background-image: url('../map.jpg');
+  background-image: url("../map.jpg");
   padding: 20% 3%;
   background-size: cover;
 }
@@ -44,14 +44,11 @@ header h1 {
   background-color: transparent;
   text-align: right;
   cursor: pointer;
- 
 }
 
 .global-map {
   overflow: hidden;
-  overflow-clip-margin: inherit;
   opacity: 0.3;
-
 }
 
 .stats {
@@ -67,6 +64,14 @@ header h1 {
   gap: 20px;
 }
 
+.stats h1 {
+  font-size: 1.5rem;
+}
+
+.search-header h1 {
+  display: none;
+}
+
 .article div h1 {
   color: black;
   font-size: 2.5rem;
@@ -78,11 +83,6 @@ header h1 {
   opacity: 0.9;
 }
 
-
-.stats h1 {
-  font-size: 1.5rem;
-}
-
 .stats-countries {
   background-color: rgb(38, 116, 205);
   padding: 10px 10px;
@@ -91,7 +91,7 @@ header h1 {
 
 svg {
   width: 20px;
-  fill: #FEAA49;
+  fill: #feaa49;
   cursor: pointer;
 }
 
@@ -104,10 +104,6 @@ svg {
   align-items: center;
 }
 
-.search-header h1 {
-  display: none;
-}
-
 form {
   display: flex;
   gap: 5px;
@@ -116,11 +112,10 @@ form {
 input {
   border-radius: 5px;
   border-color: transparent;
-  
 }
 
 .submit:hover {
-  background-color: #FEAA49;
+  background-color: #feaa49;
   color: white;
 }
 
@@ -130,19 +125,17 @@ input {
   }
 
   header {
-        padding: 1rem;
-   
+    padding: 1rem;
   }
 
   .global {
-    background-image: url('../map.jpg');
+    background-image: url("../map.jpg");
     padding: 8% 5%;
     background-size: cover;
   }
 
   .global-map {
     display: none;
-    
   }
 
   .article div {
@@ -158,6 +151,6 @@ input {
   .article div p {
     font-size: 1.5rem;
     text-align: right;
-    color: white;
+    color: black;
   }
 }

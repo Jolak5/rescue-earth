@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&family=Roboto+Slab:wght@300;400;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&family=Roboto+Slab:wght@300;400;700&display=swap");
 
 body {
   color: black;
@@ -8,40 +7,46 @@ body {
 button,
 div,
 article,
-h2, h1,
-p, ul {
+h2,
+h1,
+p,
+ul {
   padding: 0;
   margin: 0;
   border: none;
   background-color: transparent;
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: 'Roboto Slab', serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Roboto Slab", serif;
 }
 
-p, button {
-  font-family: 'Montserrat', sans-serif;
+p,
+button {
+  font-family: "Montserrat", sans-serif;
 }
 
 .isloading {
   background-color: rgb(38, 116, 205);
- height: 100vh;
- width: 100vw;
- position: relative;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
 }
+
 .loading {
   color: white;
   position: absolute;
   top: 50%;
   left: 20%;
-  transform: translate(-50, -50);
   font-size: 3rem;
 }
 
-
 @media screen and (min-width: 756px) {
   .loading {
-       left: 40%;
-      }
+    left: 40%;
+  }
 }
