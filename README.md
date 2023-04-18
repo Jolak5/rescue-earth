@@ -70,7 +70,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://covid-19-stat.onrender.com/country)
+- [Live Demo Link](https://covid-19-stat.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

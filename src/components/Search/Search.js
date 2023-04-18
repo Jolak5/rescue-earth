@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { filterItem } from '../../redux/homepage/homepageSlice';
+import { filterItem, renderItem } from '../../redux/homepage/homepageSlice';
 import Icon, { Back } from '../icon';
 
 // Render search
@@ -64,7 +64,18 @@ export default function Search() {
               <h2>{item.country}</h2>
               <p>{item.Deaths}</p>
             </div>
-            <NavLink to="country"><Icon /></NavLink>
+            <NavLink to={`/search/${item.country}`}>
+              <button
+                className="show-more"
+                type="button"
+                onClick={() => {
+                  dispatch(renderItem(item.id));
+                }}
+              >
+                <Icon />
+              </button>
+
+            </NavLink>
 
           </article>
         ))}

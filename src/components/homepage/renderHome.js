@@ -9,8 +9,8 @@ export default function RenderHome() {
   const dispatch = useDispatch();
   const covid = useSelector((state) => state.Forex.Forex);
   const global = useSelector((state) => state.Forex.Global);
-
   const newCovid = covid.slice(0, 20);
+
   return (
     <div>
       <header className="header">
@@ -22,7 +22,9 @@ export default function RenderHome() {
 
         <div className="global-details stats">
           {global.map((item) => (
+
             <article className="article" key={item.id}>
+
               <div>
                 <h1>
                   Global
@@ -62,7 +64,7 @@ export default function RenderHome() {
                 deaths
               </p>
             </div>
-            <NavLink to="country">
+            <NavLink to={`/home/${item.country}`}>
               <button
                 className="show-more"
                 type="button"
