@@ -13,12 +13,13 @@ import IndividualCard from './components/individual/IndividualCard';
 import Search from './components/Search/Search';
 
 const router = createBrowserRouter(
+
   createRoutesFromElements(
     <Route>
       <Route index element={<Homepage />} />
       <Route path="Search" index element={<Search />} />
-      <Route path="country" index element={<IndividualCard />} />
-      <Route path="search/country" index element={<IndividualCard />} />
+      <Route path="/home/:id" index element={<IndividualCard />} />
+      <Route path="/search/:id" index element={<IndividualCard />} />
 
     </Route>,
   ),

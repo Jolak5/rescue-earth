@@ -64,7 +64,7 @@ export default function Search() {
               <h2>{item.country}</h2>
               <p>{item.Deaths}</p>
             </div>
-            <NavLink to="country">
+            <NavLink to={`/search/${item.country}`}>
               <button
                 className="show-more"
                 type="button"

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Homepage.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink, useParams } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { renderItem } from '../../redux/homepage/homepageSlice';
 import Icon, { Search } from '../icon';
 
@@ -9,8 +9,8 @@ export default function RenderHome() {
   const dispatch = useDispatch();
   const covid = useSelector((state) => state.Forex.Forex);
   const global = useSelector((state) => state.Forex.Global);
-  const { countryId } = useParams();
   const newCovid = covid.slice(0, 20);
+
   return (
     <div>
       <header className="header">
@@ -22,7 +22,9 @@ export default function RenderHome() {
 
         <div className="global-details stats">
           {global.map((item) => (
+
             <article className="article" key={item.id}>
+
               <div>
                 <h1>
                   Global
@@ -62,7 +64,7 @@ export default function RenderHome() {
                 deaths
               </p>
             </div>
-            <NavLink to={countryId}>
+            <NavLink to={`/home/${item.country}`}>
               <button
                 className="show-more"
                 type="button"
