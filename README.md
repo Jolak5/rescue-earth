@@ -1,6 +1,6 @@
 <div align="center">
  
-  <h3><b>pollution-webapp</b></h3>
+  <h3><b>rescue-earth</b></h3>
 
 </div>
 
@@ -27,9 +27,9 @@
 - [📝 License](#license)
 
 
-# 📖 pollution-webapp <a name="about-project"></a>
+# 📖 rescue-earth <a name="about-project"></a>
 
-**pollution-webapp**  is a  React App where users can easily book and cancle private rocket reservations
+**rescue-earth**  is a  React App where users can easily check covid 19 stats 
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -63,7 +63,20 @@
 
 ### Key Features <a name="key-features"></a>
 
-- shows details of pollutions in a city
+- shows covid update
+- filter data by country name
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://covid-19-stat.onrender.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Video <a name="live-video"></a>
+
+- [Live video Link](https://www.loom.com/share/6b30d159296c46d6b8ec6fa857b805a2)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -72,8 +85,8 @@
 
 To get a local copy up and running, follow these steps.
 
-- clone this repo:https://github.com/Jolak5/pollution-webapp
-- cd pollution-webapp
+- clone this repo:https://github.com/Jolak5/rescue-earth
+- cd rescue-earth
 - run npm start to view the project
 
 ### Prerequisites
@@ -94,20 +107,13 @@ Example command:
 ### Setup
 
 Clone this repository to your desired folder:
-- use the git clone command with this [link](https://github.com/Jolak5/pollution-webapp)
-- cd into pollution-webapp
+- use the git clone command with this [link](https://github.com/Jolak5/rescue-earth)
+- cd into rescue-earth
 - Switch branch using this command `git checkout dev`
 - Open index.html in your browser
 - You will be able to see a simple movie website with featured movies and series
 - Once you click on the comment button you should be able to see a pop-up modal with movie details and comment form
-<!--
-Example commands:
 
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -148,11 +154,11 @@ If you like this project Give a ⭐️!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-We would like to thank:
+I would like to thank:
 - Teammates
 - Mentors
-- Youtube tutorials
 - Microverse guides
+- <a href="https://www.behance.net/sakwadesignstudio">Nelson Sakwa on Behance</a> for the design inspiration. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

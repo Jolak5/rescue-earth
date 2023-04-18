@@ -24,7 +24,8 @@
     "import/no-unresolved": "off",
     "no-shadow": "off",
     "import/no-extraneous-dependencies": "off",
-    "jsx-a11y/control-has-associated-label": "off"
+    "jsx-a11y/control-has-associated-label": "off",
+    "max-len": "off"
   },
   "ignorePatterns": ["dist/", "build/"]
 }
