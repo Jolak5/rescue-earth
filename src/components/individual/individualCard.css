@@ -8,7 +8,7 @@
 
 .individual {
   background-image: url("../covidvacine.jpg");
-  padding: 30% 0;
+  padding: 10% 0;
   color: black;
 }
 
@@ -16,7 +16,7 @@ li {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  padding: 30px 20px;
+  padding: 20px 20px;
   background-color: rgb(68, 149, 243);
 }
 
